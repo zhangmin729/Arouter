@@ -113,7 +113,8 @@ public class RouteProcessor extends BaseProcessor {
                 this.parseRoutes(routeElements);
 
             } catch (Exception e) {
-                logger.error(e);
+                e.printStackTrace();
+//                logger.error(e);
             }
             return true;
         }
@@ -125,7 +126,7 @@ public class RouteProcessor extends BaseProcessor {
         if (CollectionUtils.isNotEmpty(routeElements)) {
             // prepare the type an so on.
 
-            logger.info(">>> Found routes, size is " + routeElements.size() + " <<<");
+            logger.info(">>> Found routes, size is " + routeElements.size() + " <<<<xx");
 
             rootMap.clear();
 

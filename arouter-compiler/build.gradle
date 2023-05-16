@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'maven-publish'
 
 compileJava {
     sourceCompatibility = '1.8'
@@ -20,3 +21,16 @@ dependencies {
 }
 
 apply from: rootProject.file('gradle/publish.gradle')
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.java
+                groupId = GROUP
+                artifactId = POM_ARTIFACT_ID
+                version = VERSION_NAME
+            }
+        }
+    }
+}
