@@ -18,6 +18,7 @@ dependencies {
     implementation 'org.apache.commons:commons-collections4:4.1'
 
     implementation 'com.alibaba:fastjson:1.2.69'
+    implementation 'com.github.zhangmin729:Arouter:v1.5.4'
 }
 
 apply from: rootProject.file('gradle/publish.gradle')
